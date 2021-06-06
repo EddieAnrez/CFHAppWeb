@@ -1,0 +1,59 @@
+<div class="card">
+    <div class="card-header">
+        <input wire:model="search" class="form-control" placeholder="Ingrese Servicio">
+    </div>
+
+    @if ($services->count())
+    <div class="card-body">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Categoría</th>
+                    <th>SubCategoría</th>
+                    
+                    <th colspan="2"></th> 
+                </tr>
+
+            </thead>
+            <tbody>
+                @foreach ($services as $service)
+                <tr>
+                    <td>{{$service->id}}</td>
+                    <td>{{$service->name}}</td>
+                    <td>{{$service->subcategory->category->name}}</td>
+                    <td>{{$service->subcategory->name}}</td>
+                    <td  width="10px">
+                        <a class="btn btn-primary btn-sm d-inline-flex d-flex align-items-center" href="{{ route('config.services.edit', $service) }}"><i class="fas fa-edit mr-1"></i>Editar</a>
+                    </td>
+                    <td width="10px">
+                        <form action="{{route('config.services.destroy', $service)}}"  method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger btn-sm d-inline-flex d-flex align-items-center"><i class="fas fa-trash-alt mr-1"></i>Eliminar</button>
+                        </form>
+                    </td>
+                </tr>
+                    
+                @endforeach
+
+            </tbody>
+
+        </table>
+    </div>
+    <div class="card-footer text-center">
+        {{$services->links()}}
+    </div>
+
+ @else
+    <div class="card-body">
+        <strong>No Hay Servicios ...</strong>
+    </div>
+ @endif
+    
+
+
+
+</div>
+
