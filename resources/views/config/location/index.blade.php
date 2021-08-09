@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Home')
+@section('title', 'Listado de Locacione')
 
 @section('content_header')
     <a class="btn btn-secondary btn-sm float-right" href="{{route('config.locations.create')}}">Nueva Locación</a>

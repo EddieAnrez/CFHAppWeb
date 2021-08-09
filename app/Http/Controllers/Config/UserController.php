@@ -6,21 +6,24 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Spatie\Permission\Models\Role;
+use App\Http\Requests\UserRequest;
+use Illuminate\Support\Facades\Redirect;
 
 class UserController extends Controller
 {
-    /*public function __construct()
-    {
-        $this->middleware('can::config.users.index')->only('index');
-        $this->middleware('can::config.users.edit')->only('edit','update');
-    }*/
+   
     
     public function index()
     {
         return view('config.users.index');
     }
 
-    
+    public function create()
+    {
+        return view('config.users.create'); 
+    }
+
+      
 
     /**
      * Store a newly created resource in storage.
@@ -28,9 +31,14 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(UserRequest $request)
     {
-        //
+       
+        $data= $request->all();
+        $data['password']=bcrypt($request->password);
+        $user=User::create($data); 
+        return redirect() ->route('config.users.index') ->with('info', 'El usuario se creó con exito') ; 
+      
     }
 
   

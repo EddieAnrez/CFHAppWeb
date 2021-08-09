@@ -4,10 +4,6 @@
             <input wire:model="search" class="form-control" placeholder="Ingrese nombre o correo de usuario">
         </div>
         @if ($users->count())
-            
-      
-            
-        
         <div class="card-body">
             <table class="table table-striped">
                 <thead>
@@ -24,9 +20,10 @@
                         <td>{{$user->id}}</td>
                         <td>{{$user->name}}</td>
                         <td>{{$user->email}}</td>
-                        <td width="10px">
-                            <a class="btn btn-primary" href="{{route('config.users.edit',$user)}}">Editar</a>
+                        <td width="40px">
+                            <a class="btn btn-primary btn-sm d-inline-flex d-flex align-items-center" href="{{route('config.users.edit',$user)}}"><i class="fas fa-edit"></i>Editar</a>
                         </td>
+                        
                     </tr>
                         
                     @endforeach
@@ -40,7 +37,7 @@
         @else
         <div class="card-body">
             <strong>
-                No Hay Registros
+                No Hay Registros...
             </strong>
         </div>
         @endif

@@ -16,7 +16,7 @@ return [
 
     'title' => 'AdminLTE 3',
     'title_prefix' => '',
-    'title_postfix' => '',
+    'title_postfix' => '- Administración - Comisión Fílmica de Huatulco',
 
     /*
     |--------------------------------------------------------------------------
@@ -45,7 +45,7 @@ return [
     |
     */
 
-    'logo' => '<b>Configuración</b>',
+    'logo' => '<b>Administración</b>',
     'logo_img' => 'storage/cfh_white.jpg',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
@@ -251,7 +251,7 @@ return [
             'icon'        => 'fas fa-fw fa-home',
             
         ],
-        ['header' => 'ADMINISTRADOR'],
+        ['header' => 'ADMINISTRADOR', 'can' => 'config.users.index'],
         [
             'text' => 'Usuarios',
             'route'     => 'config.users.index',
@@ -263,35 +263,39 @@ return [
             'text' => 'Roles',
             'route'  => 'config.roles.index',
             'icon' => 'fas fa-users-cog fa-fw',
-            'active' => ['config/roles*']
+            'active' => ['config/roles*'],
+            'can' => 'config.roles.index'
             
         ],
         [
             'text' => 'Leyes y Reglamentos',
             'route'  => 'config.regulations.index',
             'icon' => 'fas fa-gavel',
-            
+            'can'  => 'config.regulations.index',
             'active' => ['config/regulations*'] 
         ],
       
         [
             'text' => 'Listados',
-            'url'  => 'admin/settings',
+            'can'  => 'config.categories.index',
             'icon' => 'fas fa-fw fa-list-ol',
+            
             
             'submenu' => [
                 [
-                    'text' => 'Categorias Blog',
+                    'text' => 'Categorías Blog',
                     'icon' => 'fas fa-caret-square-right',
                     'icon_color' => 'blue',
                     'route'  => 'config.categories.index',
-                    'active' => ['config/categories*']
+                    'can'  => 'config.categories.index',
+                    'active' => ['config/categories','config/categories/create']
                 ],
                 [
-                    'text' => 'Categorias Locaciones',
+                    'text' => 'Categorías Locaciones',
                     'icon' => 'fas fa-caret-square-right',
                     'icon_color' => 'blue',
                     'route'  => 'config.locationCategories.index',
+                    'can'  => 'config.locationCategories.index',
                     'active' => ['config/locationCategories*'] 
                 ],
                 [
@@ -299,6 +303,7 @@ return [
                     'icon' => 'fas fa-caret-square-right',
                     'icon_color' => 'blue',
                     'route'  => 'config.areas.index',
+                    'can'  => 'config.areas.index',
                     ' active' => ['config/areas*'] 
                 ],
                                
@@ -307,6 +312,7 @@ return [
                     'icon' => 'fas fa-caret-square-right',
                     'icon_color' => 'blue',
                     'route'     => 'config.tags.index',
+                    'can'     => 'config.tags.index',
                     'active' => ['config/tags*']
                 ],
                 [
@@ -314,13 +320,15 @@ return [
                     'icon' => 'fas fa-caret-square-right',
                     'icon_color' => 'blue',
                     'route'     => 'config.categoriesServices.index',
+                    'can'     => 'config.categoriesServices.index',
                     'active' => ['config/categoriesServices*']
                 ],
                 [
-                    'text'    => 'SubCategorias Servicios',
+                    'text'    => 'Sub-Categorias Servicios',
                     'icon' => 'fas fa-caret-square-right',
                     'icon_color' => 'blue',
                     'route'     => 'config.subCategoriesServices.index',
+                    'can'     => 'config.subCategoriesServices.index',
                     'active' => ['config/subCategoriesServices*']
                 ],
 
@@ -330,20 +338,22 @@ return [
             'text' => 'Generales',
             'route'  => 'settings',
             'icon' => 'fas fa-cog',
-            
+            'can'  => 'settings',
             'active' => ['settings*']
         ],
         [
             'text' => 'Desktop',
-            'url'  => 'admin/settings',
+            'route'  => 'config.config.create',
+            'can'  => 'config.config.create',
             'icon' => 'fas fa-fw fa-rss',
             
         ],
         
 
         ['header' => 'EDITOR'],
-        [
+        /* [
             'text' => 'Locaciones',
+            'can'  => 'config.locations.index',
             'icon' => 'fas fa-globe-americas',
             
             'submenu' => [
@@ -351,39 +361,42 @@ return [
                 [
                     'text' => 'Lista de Locaciones',
                     'route'  => 'config.locations.index',
+                    'can'  => 'config.locations.index',
                     'icon' => 'fas fa-fw fa-file',
-                    'icon_color' => 'purple',
+                    'icon_color' => 'yellow',
                 ],
 
                 [
                     'text' => 'Crear Locacion',
                     'route'  => 'config.locations.create',
+                    'can'  => 'config.locations.create',
                     'icon' => 'fas fa-fw fa-clipboard',
-                    'icon_color' => 'purple',
+                    'icon_color' => 'yellow',
                 ],
                 
             ],
+        ], */
+
+        [
+            'text' => 'Locaciones',
+            'route'  => 'config.locations.index',
+            'can'  => 'config.locations.index',
+            'icon' => 'fas fa-globe-americas',
+            'active' => ['config/locations*']
+            
         ],
+
+
         [
             'text' => 'Formularios de Contacto',
             'route'  => 'config.contacts.index',
+            'can'  => 'config.contacts.index',
             'icon' => 'fas fa-phone-alt',
             'active' => ['config/contacts*']
             
         ],
+     
       /*   [
-            'text' => 'Locaciones',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-location-arrow',
-        ], */
-        
-       /*  [
-            'text' => 'Mapa Filmico',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-map',
-           
-        ], */
-        [
             'text' => 'Noticias y Eventos',
             'icon' => 'fas fa-fw fa-rss',
             
@@ -392,20 +405,30 @@ return [
                 [
                     'text' => 'Crear Post',
                     'route'  => 'config.posts.create',
-                    'icon_color' => 'purple',
+                    'can'  => 'config.posts.create',
+                    'icon_color' => 'yellow',
                     'icon' => 'fas fa-fw fa-clipboard',
                 ],
                 [
                     'text' => 'Lista de Posts',
                     'route'  => 'config.posts.index',
+                    'can'  => 'config.posts.index',
                     'icon' => 'fas fa-fw fa-file',
-                    'icon_color' => 'purple',
+                    'icon_color' => 'yellow',
                 ],
             ],
-        ],
+        ], */
         [
+            'text' => 'Posts',
+            'route'  => 'config.posts.index',
+            'can'  => 'config.posts.index',
+            'icon' => 'fas fa-fw fa-rss',
+            'active' => ['config/posts*']
+            
+        ],
+      /*   [
             'text' => 'Servicios',
-            'url'  => 'admin/settings',
+            'can'  => 'config.services.index',
             'icon' => 'fas fa-fw fa-lock',
             
             'submenu' => [
@@ -413,29 +436,42 @@ return [
                 [
                     'text' => 'Lista de Servicios',
                     'route'  => 'config.services.index',
+                    'can'  => 'config.services.index',
                     'icon' => 'fas fa-fw fa-file',
-                    'icon_color' => 'purple',
+                    'icon_color' => 'yellow',
                 ],
 
                 [
                     'text' => 'Crear Servicio',
                     'route'  => 'config.services.create',
+                    'can'  => 'config.services.create',
                     'icon' => 'fas fa-fw fa-clipboard',
-                    'icon_color' => 'purple',
+                    'icon_color' => 'yellow',
                 ],
                 
             ],
+        ], */
+
+        [
+            'text' => 'Servicios',
+            'route'  => 'config.services.index',
+            'can'  => 'config.services.index',
+            'icon' => 'fas fa-fw fa-lock',
+            'active' => ['config/services*']
+            
         ],
         [
             'text' => 'Tramites y Permisos',
             'route'  => 'config.permissions.index',
+            'can'  => 'config.permissions.index',
             'icon' => 'fas fa-archive',
             
             'active' => ['config/permissions*']
         ],
         [
-            'text' => 'Enlaces de Interes',
+            'text' => 'Enlaces de Interés',
             'route'  => 'config.links.index',
+            'can'  => 'config.links.index',
             'icon' => 'fas fa-fw fa-link',
             'active' => ['config/links*']
             
@@ -443,6 +479,7 @@ return [
         [
             'text' => 'Estímulos',
             'route'  => 'config.incentives.index',
+            'can'  => 'config.incentives.index',
             'icon' => 'fas fa-money-check-alt',
             'active' => ['config/incentives*']
             
@@ -450,64 +487,12 @@ return [
         [
             'text' => 'Videos',
             'route'  => 'config.videos.index',
+            'can'  => 'config.videos.index',
             'icon' => 'fas fa-fw fa-video',
             'active' => ['config/videos*']
             
         ],
-        /*[
-            'text'    => 'Mapa Filmico',
-            'icon'    => 'fas fa-fw fa-share',
-            'submenu' => [
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
-                ],
-                [
-                    'text'    => 'level_one',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'level_two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
-                ],
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
-                ],
-            ],
-        ],
-        ['header' => 'labels'],
-        [
-            'text'       => 'important',
-            'icon_color' => 'red',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'warning',
-            'icon_color' => 'yellow',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'information',
-            'icon_color' => 'cyan',
-            'url'        => '#',
-        ],*/
+        
     ],
 
     /*

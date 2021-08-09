@@ -1,10 +1,10 @@
 @extends('adminlte::page')
 
-@section('title', 'Comisión Fílmica de Huatulco - Configuración - Trámites y Servicios')
+@section('title', 'Listado de Trámites y Servicio')
 
 @section('content_header')
-    <a href="{{ route('config.permissions.create') }}" class="btn btn-secondary float-right">Nuevo Trámite - Servicio</a>
-    <h1>Listado de Trámites y Servicios</h1>
+    <a href="{{ route('config.permissions.create') }}" class="btn btn-secondary float-right">Nuevo Trámite - Permiso</a>
+    <h1>Listado de Trámites y Permisos</h1>
 @stop
 
 @section('content')

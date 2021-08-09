@@ -22,11 +22,11 @@
                     <td  width="10px">
                         <a class="btn btn-primary btn-sm d-inline-flex d-flex align-items-center" href="{{route('config.locations.edit', $location)}}"><i class="fas fa-edit"></i>Editar</a>
                     </td>
-                    <td width="10px"> 
+                    <td width="10px">  
                         <form action="{{route('config.locations.destroy', $location)}}"  method="POST">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="btn btn-danger">Eliminar</button>
+                            <button type="submit" class="btn btn-danger btn-sm d-inline-flex d-flex align-items-center"><i class="fas fa-trash-alt mr-1"></i>Eliminar</button>
                         </form>
                     </td>
                 </tr>

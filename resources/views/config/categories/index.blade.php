@@ -1,10 +1,10 @@
 @extends('adminlte::page')
 
-@section('title', 'Home')
+@section('title', 'Lista Categorías')
 
 @section('content_header')
-    <a class="btn btn-secondary float-right" href="{{ route('config.categories.create') }}">Agregar Categoria</a>
-    <h1>Lista Categorias</h1>
+    <a class="btn btn-secondary float-right" href="{{ route('config.categories.create') }}">Agregar Categoría</a>
+    <h1>Lista Categorías</h1>
 @stop
 
 @section('content')
@@ -32,13 +32,13 @@
                             <td>{{ $category->id }}</td>
                             <td>{{ $category->name }}</td>
                             <td width="10px">
-                                <a class="btn btn-primary" href="{{ route('config.categories.edit', $category) }}">Editar</a>
+                                <a class="btn btn-primary btn-sm d-inline-flex d-flex align-items-center" href="{{ route('config.categories.edit', $category) }}"><i class="fas fa-edit"></i>Editar</a>
                             </td>
                             <td width="10px">
                                 <form action="{{ route('config.categories.destroy', $category) }}" method="post">
                                     @csrf
                                     @method('delete')
-                                    <button type="submit" class="btn btn-danger">Eliminar</button>
+                                    <button type="submit" class="btn btn-danger btn-sm d-inline-flex d-flex align-items-center"><i class="fas fa-trash-alt mr-1"></i>Eliminar</button>
                                 </form>
                             </td>
                         </tr>

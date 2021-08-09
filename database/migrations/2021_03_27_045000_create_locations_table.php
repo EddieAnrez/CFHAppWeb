@@ -23,10 +23,8 @@ class CreateLocationsTable extends Migration
             $table->longtext('features')->nullable();
             $table->text('contact')->nullable();
             $table->enum('status',[1,2])->default(1);
-            $table->enum('showInMap',[1,2])->default(1);
-           
- 
-           
+            $table->enum('showMap',[1,2])->default(1);
+                     
             $table->string('latlocation')->nullable();
             $table->string('lonlocation')->nullable();
 

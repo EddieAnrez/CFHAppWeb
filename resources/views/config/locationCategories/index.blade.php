@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Home')
+@section('title', 'Lista Categorías Locación')
 
 @section('content_header')
     <a class="btn btn-secondary float-right" href="{{ route('config.locationCategories.create') }}">Agregar Categoría Locación</a>

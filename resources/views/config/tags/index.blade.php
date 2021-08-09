@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Home')
+@section('title', 'Mostrar Listado Etiquetas')
 
 @section('content_header')
     <a class="btn btn-secondary float-right" href="{{ route('config.tags.create') }}">Nueva Etiqueta</a>
@@ -27,13 +27,13 @@
                             <td>{{ $tag->id }}</td>
                             <td>{{ $tag->name }}</td>
                             <td width="10px">
-                                <a class="btn btn-primary" href="{{ route('config.tags.edit', $tag) }}">Editar</a>
+                                <a class="btn btn-primary btn-sm d-inline-flex d-flex align-items-center" href="{{ route('config.tags.edit', $tag) }}"><i class="fas fa-edit"></i>Editar</a>
                             </td>
                             <td width="10px">
                                 <form action="{{ route('config.tags.destroy', $tag) }}" method="post">
                                     @csrf
                                     @method('delete')
-                                    <button class="btn btn-danger" type="submit">Eliminar</button>
+                                    <button class="btn btn-danger btn-sm d-inline-flex d-flex align-items-center" type="submit"><i class="fas fa-trash-alt mr-1"></i>Eliminar</button>
                                 </form>
                             </td>
                         </tr>

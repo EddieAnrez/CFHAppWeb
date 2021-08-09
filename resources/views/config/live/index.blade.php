@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Home')
+@section('title', 'Configuración Transmisión')
 
 @section('content_header')
 @if (!$live->count())

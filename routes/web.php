@@ -12,6 +12,10 @@ use App\Http\Controllers\LiveController;
 use App\Http\Controllers\MapController;
 use App\Http\Controllers\LinkController;
 use App\Http\Controllers\IncentiveController;
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\HuatulcoController;
+use App\Http\Controllers\PermissionController;
+use App\Http\Controllers\RegulationController;
 
 
 
@@ -35,13 +39,13 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/home', function () {
 
 
 //Nosotros
-Route::get('/about', function () { return view('about.about');
-})->name('about');
+Route::get('/about', [AboutController::class,'index'])->name('about');
 
 Route::get('/links',[LinkController::class,'index'])->name('links'); 
 
-Route::get('/huatulco', function () { return view('about.huatulco');
-})->name('huatulco');
+Route::get('/huatulco',[HuatulcoController::class,'index'])->name('huatulco'); 
+
+
 
 //Locaciones
 
@@ -64,11 +68,9 @@ Route::get('/services', [ServiceController::class, 'index'])->name('services');
 Route::get('/covid', function () { return view('production.covid');
 })->name('covid');
 
-Route::get('/regulations', function () { return view('production.regulations');
-})->name('regulations');
+Route::get('/regulations',[RegulationController::class,'index'])->name('regulations'); 
 
-Route::get('/permissions', function () { return view('production.permissions');
-})->name('permissions');
+Route::get('/permissions',[PermissionController::class,'index'])->name('permissions'); 
 
 Route::get('/incentives',[IncentiveController::class,'index'])->name('incentives'); 
 

@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\config;
 
 use App\Http\Controllers\Controller;
+use App\Models\Config;
 use Illuminate\Http\Request;
+use App\Http\Requests\ConfigRequest;
 
 class ConfigController extends Controller
 {
@@ -24,7 +26,7 @@ class ConfigController extends Controller
      */
     public function create()
     {
-        //
+        return view('config.config.create');
     }
 
     /**
@@ -33,9 +35,11 @@ class ConfigController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ConfigRequest $request)
     {
-        //
+              
+        $regulation=Config::create($request->all());  
+        return redirect()->route('config.config.create')->with('info', 'El mensaje se se creó con exito');
     }
 
     /**

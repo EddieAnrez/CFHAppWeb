@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title', 'Videos')
 @section('main')
 <div class="container bg-black  px-4 py-8 sm:px-6 lg:px-8 vertical ">
     <h1 class=" text-white text-center mb-4 text-6xl font-bold ">Videos</h1>

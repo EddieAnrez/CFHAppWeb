@@ -5,23 +5,7 @@
     <div class="text-center mb-8 ">
         <div class="flex lg:flex-row flex-col {{-- items-center --}} justify-center {{-- justify-items-center --}} {{-- text-center --}}">
             @csrf
-            {{--<label class="text-white mx-2" for="">Categorias</label>
-            < Select wire:model="category">
-                <option class="italic" value="">Seleccione Categoria</option>
-                @foreach ($categories as $category)
-                <option value="{{$category->id}}">{{$category->name}}</option>
-                @endforeach
-                
-              
-            </Select> --}}
-            {{-- <label class="text-white mx-2" for="">SubCategoria</label>
-            <Select wire:model="subcategory">
-              <option  class="italic" value="">Seleccione SubCategoria</option>
-                @foreach ($subcategories as $subcategory)
-                <option value="{{$subcategory->id}}">{{$subcategory->name}}</option>
-                @endforeach
-               
-            </Select> --}}
+          
             <label class="text-white mx-2 my-2" for="">Categorías</label>
             <Select class="lg:mr-6 rounded-lg" wire:model="subcategory">
               <option  class="italic" value="">Seleccione Categoría</option>

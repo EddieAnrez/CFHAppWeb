@@ -2,11 +2,11 @@
 
 namespace Database\Seeders;
 
+
 use App\Models\Area;
 use App\Models\Category;
 use App\Models\Category_L;
 use App\Models\Tag;
-
 use App\Models\Config;
 use App\Models\Contact;
 use App\Models\Permisssion;
@@ -19,10 +19,8 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Storage;
 use App\Models\Link;
 use App\Models\Incentive;
-
-
- 
-
+use App\Models\About;
+use App\Models\Directory;
 
 class DatabaseSeeder extends Seeder
 {
@@ -36,11 +34,13 @@ class DatabaseSeeder extends Seeder
        Storage::deleteDirectory('posts');
        Storage::deleteDirectory('locations');
        Storage::deleteDirectory('incentives');
+       Storage::deleteDirectory('huatulco');
        
        
        Storage::makeDirectory('posts');
        Storage::makeDirectory('locations');
        Storage::makeDirectory('incentives');
+       Storage::makeDirectory('huatulco');
 
        $this->call(RoleSeeder::class);
         
@@ -53,6 +53,7 @@ class DatabaseSeeder extends Seeder
         $this->call(ConfigSeeder::class);
         $this->call(LocationSeeder::class);
         $this->call(IncentiveSeeder::class);
+        $this->call(HuatulcoSeeder::class);
         ServiceCategory::factory(5)->create();
         ServiceSubCategory::factory(20)->create();
         Service::factory(50)->create();
@@ -61,6 +62,8 @@ class DatabaseSeeder extends Seeder
         Permisssion::factory(20)->create();
         Contact::factory(100)->create();
         Link::factory(12)->create();
+        About::factory(1)->create();
+        Directory::factory(6)->create();
         
     }
 }

@@ -30,10 +30,23 @@
                 </h2>
                 <hr class="my-2 border-gray-700 ">
                 <p class="my-2 text-gray-500">{{$location->adress}}</p>
-                <iframe class="object-contain mx-auto" width="375" height="400" style="border:0" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?q={{$location->latlocation}}%2C{{$location->latlocation}}&key=AIzaSyDUc7qfwOzYw3GDdv17LrM5ttnC2ypx5ws"></iframe> 
-                {{-- <img class="object-contain mx-auto"
+
+                <iframe width="350" height="400" style="border:0" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?q={{$location->latlocation}}%2C%20{{$location->lonlocation}}&key={{env('GOOGLE_MAPS_API_KEY')}}"></iframe> 
+                 {{-- <img src="https://maps.googleapis.com/maps/api/staticmap?center='.{{$location->latlocation}}.'%2c%20'.{{$location->lonlocation}}.'&zoom=12&size=400x400&key='.{{env('GOOGLE_MAPS_API_KEY')}}.'" alt="">  --}}
+                
+                {{--  <img width="350" src="https://maps.googleapis.com/maps/api/staticmap?center={{$location->latlocation}},{{$location->lonlocation}}&zoom=16&scale=1&size=350x400&maptype=roadmap&key={{env('GOOGLE_MAPS_API_KEY')}}&format=png&visual_refresh=true&markers=size:mid%7Ccolor:0xff0000%7Clabel:%7C{{$location->latlocation}},{{$location->lonlocation}}" alt="Mapa de {{$location->name}}">
+ --}}
+                
+                     {{--  <img width="350" src="https://maps.googleapis.com/maps/api/staticmap?center={{$location->latlocation}},{{$location->lonlocation}}&zoom=16&scale=1&size=350x400&maptype=roadmap&key={{env('GOOGLE_MAPS_API_KEY')}}&format=png&visual_refresh=true&markers=size:mid%7Ccolor:0xff0000%7Clabel:%7C{{$location->latlocation}},{{$location->lonlocation}}" > --}}
+
+
+
+                {{-- <iframe class="object-contain mx-auto" width="375" height="400" style="border:0" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?q=40.714728%2C-73.998672&key='.env(GOOGLE_MAPS_API_KEY).'"></iframe> 
+                <img class="object-contain mx-auto"
                     src="https://maps.googleapis.com/maps/api/staticmap?center=40.714728,-73.998672&zoom=16&size=400x400&maptype=terrain&markers=color:red%7C40.714728,-73.998672&key=AIzaSyDUc7qfwOzYw3GDdv17LrM5ttnC2ypx5ws"
-                    alt=""> --}}
+                    alt="">  --}}
+
+                   {{--  <img width="350" src="https://maps.googleapis.com/maps/api/staticmap?center=15.753088582250488,+-96.13049967840462&zoom=13&scale=1&size=350x400&maptype=roadmap&key=AIzaSyDUc7qfwOzYw3GDdv17LrM5ttnC2ypx5ws&format=png&visual_refresh=true&markers=size:mid%7Ccolor:0xff0000%7Clabel:1%7C15.753088582250488,+-96.13049967840462" alt="Google Map of 15.753088582250488, -96.13049967840462"> --}}
             </div>
 
 

@@ -7,7 +7,15 @@
 </div>
 
 
-<div class="row mb-3">
+<div class="form-group">
+    {!! Form::label('img', 'Link de Imagen:') !!}
+    {!! Form::text('img', null, ['class' => 'form-control', 'placeholder' => 'Ingrese el link de la imagen enlace']) !!}
+    @error('img')
+        <small class="text-danger">{{ $message }}</small>
+    @enderror
+</div>
+
+{{-- <div class="row mb-3">
     <div class="col">
         <div class="image-wrapper"> 
             @isset ($link->image)
@@ -36,7 +44,7 @@
             nobis laudantium optio ut architecto odio? Ipsam sequi impedit quae eligendi optio qui quia eveniet
             expedita?</p>
     </div>
-</div>
+</div> --}}
 
 
 

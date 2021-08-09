@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Home')
+@section('title', 'Lista de Roles')
 
 @section('content_header')
 <a class="btn btn-secondary float-right" href="{{route('config.roles.create')}}">Nuevo rol</a>

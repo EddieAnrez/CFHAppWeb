@@ -35,7 +35,7 @@ class RegulationController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request) 
     {
         $request->validate([
             'name'=>'required',
@@ -44,6 +44,8 @@ class RegulationController extends Controller
             'url'=>'required'
             
         ]);
+
+        $request['user_id'] = auth()->user()->id;
        
         $regulation=Regulation::create($request->all()); 
         return redirect()->route('config.regulations.index')->with('info', 'La Ley/Regulación se creó con exito'); 

@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Home')
+@section('title', 'Revisar Formulario Contacto')
 
 @section('content_header')
     

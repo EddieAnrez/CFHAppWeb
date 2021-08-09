@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', 'Home')
+@section('title', 'Configuraciones')
 
 @section('content_header')
-     <h1>Configuraciónes</h1>
+     <h1>Configuraciones</h1>
 @stop
 
 @section('content')
@@ -23,12 +23,34 @@
             </thead>
             <tbody>
                 <tr>
-                        <td>Transmisión en Vivo</td>
-                        <td width="10px">
-                            <a class="btn btn-primary btn-sm d-inline-flex d-flex align-items-center" href="{{route('config.live.index')}}"><i class="fas fa-edit mr-1"></i>Configurar</a>
-                        </td>
+                    <td>Transmisión en Vivo</td>
+                    <td width="10px">
+                            <a class="btn btn-primary btn-sm d-inline-flex d-flex align-items-center" href="{{route('config.live.edit', $live[0])}}"><i class="fas fa-edit mr-1"></i>Configurar</a>
+                    </td>
                         
-                    </tr>
+                </tr>
+                <tr> 
+                    <td>Información Comisión Fílmica</td>
+                    <td><a class="btn btn-primary btn-sm d-inline-flex d-flex align-items-center" href="{{route('config.about.edit', $about[0])}}"><i class="fas fa-edit mr-1"></i>Configurar</a></td>
+                </tr>
+                <tr>
+                    <td>Directorio Comisión</td>
+                    <td><a class="btn btn-primary btn-sm d-inline-flex d-flex align-items-center" href="{{route('config.directory.index')}}"><i class="fas fa-edit mr-1"></i>Configurar</a></td>
+                </tr> 
+               <tr>
+                    <td>Información Región</td>
+                    <td><a class="btn btn-primary btn-sm d-inline-flex d-flex align-items-center" href="{{route('config.huatulco.index')}}"><i class="fas fa-edit mr-1"></i>Configurar</a></td>
+                </tr>
+              {{--   <tr>
+                    <td>Información Acerca de Protocolo Covid</td>
+                    <td><a class="btn btn-primary btn-sm d-inline-flex d-flex align-items-center" href=""><i class="fas fa-edit mr-1"></i>Configurar</a></td>
+                </tr>  --}}
+              
+                {{-- 
+                <tr>
+                    <td>Seleccionar Video Inicio</td>
+                    <td><a class="btn btn-primary btn-sm d-inline-flex d-flex align-items-center" href=""><i class="fas fa-edit mr-1"></i>Configurar</a></td>
+                </tr> --}}
                 
 
             </tbody>

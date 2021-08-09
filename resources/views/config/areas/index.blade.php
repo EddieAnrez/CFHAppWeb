@@ -1,10 +1,10 @@
 @extends('adminlte::page')
 
-@section('title', 'Home')
+@section('title', 'Lista Categorías Áreas')
 
 @section('content_header')
     <a class="btn btn-secondary float-right" href="{{ route('config.areas.create') }}">Agregar Área Locación</a>
-    <h1>Lista Categorías</h1>
+    <h1>Lista Categorías Áreas</h1>
 @stop
 
 @section('content')

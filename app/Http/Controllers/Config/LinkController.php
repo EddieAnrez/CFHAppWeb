@@ -85,7 +85,7 @@ class LinkController extends Controller
     {
         $link->update($request->all());
 
-        if ($request->file('file')) {
+        /* if ($request->file('file')) {
             $url = Storage::put('posts', $request->file('file'));
 
             if ($link->image) {
@@ -99,7 +99,7 @@ class LinkController extends Controller
                     'url' => $url
                 ]);
             }
-        }
+        } */
 
         return redirect()->route('config.links.index')->with('info', 'El enlace se actualizó con éxito');
     }

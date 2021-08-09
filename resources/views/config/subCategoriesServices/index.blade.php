@@ -1,10 +1,10 @@
 @extends('adminlte::page')
 
-@section('title', 'Home')
+@section('title', 'Lista Sub Categorías Servicios')
 
 @section('content_header')
     <a class="btn btn-secondary float-right" href="{{ route('config.subCategoriesServices.create') }}">Agregar Sub Categoría Servicio</a>
-    <h1>Lista Sub Categorías</h1>
+    <h1>Lista Sub Categorías Servicios</h1>
 @stop
 
 @section('content')

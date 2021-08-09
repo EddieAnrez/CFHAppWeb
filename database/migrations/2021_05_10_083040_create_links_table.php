@@ -17,7 +17,7 @@ class CreateLinksTable extends Migration
             $table->id();
             $table->string('img');
             $table->string('link');
-            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('user_id'); 
             $table->timestamps();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });

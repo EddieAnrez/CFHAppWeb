@@ -6,6 +6,7 @@ use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Models\Post;
 use App\Models\Tag;
+use Illuminate\Support\Str;
 
 class BlogController extends Controller
 {
@@ -26,7 +27,9 @@ class BlogController extends Controller
                                     ->take(5)
                                     ->get();
 
-        return view('blog.show', compact('post','similares')); 
+        $title = Str::limit($post->name, 30, '...');
+
+        return view('blog.show', compact('post','similares','title')); 
 
     }
 

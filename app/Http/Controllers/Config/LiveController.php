@@ -19,8 +19,7 @@ class LiveController extends Controller
      */
     public function index()
     {
-       $live = Live::all();
-       return view('config.live.index',compact('live'));
+     
        
     }
 
@@ -42,11 +41,12 @@ class LiveController extends Controller
      */
     public function store(Request $request)
     {
+        $request['user_id'] = auth()->user()->id;
         $request->validate([
             'descripcion'=>'required',
             'id_youtube'=>'required',
             'website'=>'required',
-            
+            'user_id'=>'required',
             'link'=>'required'
             
         ]);
@@ -77,7 +77,7 @@ class LiveController extends Controller
      */
     public function edit(Live $live)
     {
-        return view ('config.live.edit', compact('live'));
+        return view ('config.live.edit', compact('live')); 
     }
 
     /**
@@ -89,11 +89,12 @@ class LiveController extends Controller
      */
     public function update(Request $request, Live $live)
     {
+        $request['user_id'] = auth()->user()->id;
         $request->validate([
             'descripcion'=>'required',
             'id_youtube'=>'required',
             'website'=>'required',
-            
+            'user_id'=>'required',
             'link'=>'required'
         ]);
 
@@ -101,7 +102,7 @@ class LiveController extends Controller
 
 
         $live->update($request->all());
-        return redirect()->route('config.live.index')->with('info', 'La Información de Transmisión se actualizó con exito');
+        return redirect()->route('config.live.edit',compact('live'))->with('info', 'La Información de Transmisión se actualizó con exito');
     }
 
     /**

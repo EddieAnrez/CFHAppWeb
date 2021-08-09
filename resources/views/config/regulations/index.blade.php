@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Comisión Fílmica de Huatulco - Configuración - Leyes y Reglamentos')
+@section('title', 'Listado de Leyes y Reglamentos')
 
 @section('content_header')
     <a href="{{ route('config.regulations.create') }}" class="btn btn-secondary float-right">Nueva Ley - Reglamento</a>

@@ -27,7 +27,7 @@ class LocationsIndex extends Component
         ->where('name','LIKE', '%'.$this->idSearch.'%')
         
         ->latest('id')
-        ->paginate(12);
+        ->paginate(9);
 
         $categories = Category_L::all();
         $areas = Area::all();

@@ -28,7 +28,7 @@
                         {{ date('M', strtotime($post->created_at)) }} del
                         {{ date('Y', strtotime($post->created_at)) }}</span>
                 </p>
-                <p class="text-gray-700 text-base"> {!! \Illuminate\Support\Str::limit($post->extract, 150, $end = '...') !!}
+                <p class="text-gray-700 text-base"> {!! \Illuminate\Support\Str::limit($post->extract, 140, $end = '...') !!}
                 </p>
                 <a href="{{ route('blog.show', $post) }}"
                     class="py-2  text-comision  inline-flex items-center font-bold">Continuar Leyendo...

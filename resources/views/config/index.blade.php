@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Home')
+@section('title', 'Inicio')
 
 @section('content_header')
      <h1>Mensajes del Sistema</h1>

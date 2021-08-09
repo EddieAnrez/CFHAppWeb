@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Comisión Fílmica de Huatulco - Configuración - Trámites y Servicios')
+@section('title', 'Crear Trámite/Servicio')
 
 @section('content_header')
     <h1>Crear Trámite/Servicio</h1> 
@@ -67,6 +67,7 @@
             space: '-'
         });
     });
+</script>
 @stop
 
 

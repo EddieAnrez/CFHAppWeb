@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\About;
+use App\Models\Location;
 use Illuminate\Http\Request;
 use Bioudi\LaravelMetaWeatherApi\Weather;
 use Illuminate\Support\Facades\Http;
@@ -14,12 +16,12 @@ class WelcomeController extends Controller
         $weather = $data ->json();
 
         $posts = Post::where('status', 2)->latest('id')->take(4)->get();
-        return view('welcome', compact('weather', 'posts'));
 
-      
+        $locations = Location::where('status', 2)->latest('id')->take(3)->get();
+
+        $about = About::all();
+
+        return view('welcome', compact('weather', 'posts', 'locations','about'));
 
     }
-
-   
-    
 }

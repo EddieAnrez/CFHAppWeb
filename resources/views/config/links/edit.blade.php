@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Home')
+@section('title', 'Editar Enlace')
 
 @section('content_header')
     <h1>Editar Enlace</h1>

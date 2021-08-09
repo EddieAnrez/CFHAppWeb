@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Home')
+@section('title', 'Crear Nuevo Enlace')
 
 @section('content_header')
     <h1>Crear Nuevo Enlace</h1>
@@ -9,7 +9,7 @@
 @section('content')
     <div class="card">
         <div class="card-body">
-            {!! Form::open(['route' => 'config.links.store', 'autocomplete' => 'off', 'files' => true]) !!}
+            {!! Form::open(['route' => 'config.links.store', 'autocomplete' => 'off', 'files' => true]) !!} 
             
 
             @include('config.links.partials.form')

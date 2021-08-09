@@ -35,12 +35,12 @@
                         <div class="lg:w-1/4 w-1/2  px-3 mb-6 ">
                             <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                                 for="grid-first-name">
-                                Categoria
+                                Categoría
                             </label>
                             <select wire:model="idCategory"
                                 class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                                 id="grid-state">
-                                <option value="">Todas las Categorias</option>
+                                <option value="">Todas las Categorías</option>
                                 @foreach ($categories as $category)
                                 <option value="{{$category->id}}">{{$category->name}}</option>
                                 @endforeach

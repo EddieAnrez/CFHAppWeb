@@ -52,7 +52,7 @@ class CategoryController extends Controller
        
         $category = Category::create($request->all());
 
-        return redirect()->route('config.categories.edit', $category)->with('info','La categoria se creo con exito');
+        return redirect()->route('config.categories.edit', $category)->with('info','La categoría se creo con exito');
     }
 
   
@@ -84,7 +84,7 @@ class CategoryController extends Controller
 
         $category->update($request->all());
 
-        return redirect()->route('config.categories.edit', $category)->with('info','La categoria se actualizo con exito');
+        return redirect()->route('config.categories.index')->with('info','La categoría se actualizo con éxito');
 
 
 
@@ -100,6 +100,6 @@ class CategoryController extends Controller
     {
         $category->delete();
 
-        return redirect()->route('config.categories.index')->with('info','La categoria se elimino con exito');
+        return redirect()->route('config.categories.index')->with('info','La categoría se eliminó con éxito');
     }
 }

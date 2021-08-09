@@ -113,4 +113,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(Service::class);
     }
+
+    public function directory()
+    {
+        return $this->hasMany(About::class);
+    }
 }

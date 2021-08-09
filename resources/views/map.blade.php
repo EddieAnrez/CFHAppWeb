@@ -16,6 +16,7 @@
 
 
 @extends('layouts.app')
+@section('title', 'Mapa Fílmico')
 @section('main')
 <h1 class=" text-white text-center mb-4 text-6xl font-bold ">Mapa Fílmico Huatulco</h1>
 <hr class="container mb-8 border-gray-700">

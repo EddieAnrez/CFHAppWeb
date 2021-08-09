@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title', 'Contacto')
 @section('main')
     <div class="container bg-black  px-4 py-8 sm:px-6 lg:px-8 vertical ">
         <h1 class=" text-white text-center lg:text-6xl text-4xl">Contáctanos</h1>
@@ -14,9 +15,7 @@
             <div class="bg-gray-100 border border-gray-400 text-gray-700 px-4 py-3 rounded relative mb-8" role="alert">
                 <strong class="font-bold"><i class="fas fa-thumbs-up mr-1"></i> {{ session('info') }}</strong>
              
-               {{--  <span class="absolute top-0 bottom-0 right-0 px-4 py-3">
-                  <svg class="fill-current h-6 w-6 text-gray-500" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><title>Close</title><path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"/></svg>
-                </span> --}}
+          
               </div>
             </div>
   
@@ -40,7 +39,7 @@
                         </div>
                         <div class="lg:w-1/2 px-6 mt-4 lg:mt-0 lg:block hidden">
                             <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs">EMAIL</h2>
-                            <a class="text-comision font-bold text-xs leading-relaxed">comisionfilmicahuatulco@gmail.com</a>
+                            <a class="text-comision font-bold text-xs leading-relaxed">comisionfilmicadehuatulco@gmail.com</a>
                             <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">TELEFONO</h2>
                             <p class="leading-relaxed">951 179 62 49</p>
                         </div>

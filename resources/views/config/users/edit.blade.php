@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', 'Home')
+@section('title', 'Asignar Rol')
 
 @section('content_header')
-    <h1>Asignar un Rol</h1>
+    <h1>Asignar Rol</h1>
 @stop
 
 @section('content')

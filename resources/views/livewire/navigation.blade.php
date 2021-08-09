@@ -36,19 +36,18 @@
             </div>
 
 
-            <div class="flex-1 flex items-center justify-center {{-- items-stretch --}} justify-start">
-
+            <div class="flex-1 flex items-center justify-center  lg:items-stretch  lg:justify-start">
                 <a href="/" class="flex-shrink-0 flex items-center">
                     <img class="block lg:hidden h-24 w-auto mb-2" src="{{ asset('storage/cfh_logo_n.jpg') }}"
                         alt="Huatulco">
 
                 </a>
 
-                <div class="hidden lg:block sm:ml-6">
+                <div class="hidden lg:block sm:ml-6 font-semibold">
                     <div class="flex md:space-x-1 lg:space-x-4 ">
-                        <div class="group inline-block relative">
+                        <div class="group inline-block relative ">
                             <div
-                                class="bg-black text-gray-300 hover:bg-gray-700  font-semibold py-2 px-3 rounded inline-flex items-center hover:text-white">
+                                class="bg-black text-gray-300 hover:bg-gray-700 py-2 px-3 rounded inline-flex items-center hover:text-white">
                                 <span class="mr-1">Sobre Nosotros</span>
                                 <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 20 20">
@@ -57,35 +56,35 @@
                                 </svg>
                             </div>
                             <ul class="absolute hidden  text-gray-700 pt-1  group-hover:block text-center">
-                                <li class="">
-                                    <a class="rounded-t bg-gray-200 hover:bg-gray-400 py-1 px-4 block whitespace-no-wrap text-sm"
+                                <li class="border-b border-gray-300">
+                                    <a class="rounded-t bg-gray-200 hover:bg-gray-400 py-1 px-6 block whitespace-no-wrap text-sm"
                                         href="{{ route('about') }}">Comisión Fílmica</a>
                                 </li>
-                                <li class="">
-                                    <a class="bg-gray-200 hover:bg-gray-400 py-1 px-4 block whitespace-no-wrap text-sm"
+                                <li class="border-b border-gray-300">
+                                    <a class="bg-gray-200 hover:bg-gray-400 py-1 px-6 block whitespace-no-wrap text-sm"
                                         href="{{ route('huatulco') }}">Info. Región</a>
                                 </li>
                                 <li class="">
-                                    <a class=" bg-gray-200 rounded-b hover:bg-gray-400 py-1 px-4 block whitespace-no-wrap text-sm"
+                                    <a class=" bg-gray-200 rounded-b hover:bg-gray-400 py-1 px-6 block whitespace-no-wrap text-sm"
                                         href="{{ route('links') }}">Enlaces de Interés</a>
                                 </li>
 
                             </ul>
                         </div>
                         <a href="{{ route('location.index') }}"
-                            class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Locaciones</a>
+                            class="  text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base ">Locaciones</a>
                         <a href="{{ route('map') }}"
-                            class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Mapa
+                            class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base">Mapa
                             Fílmico</a>
                         <a href="{{ route('videos') }}"
-                            class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Videos</a>
+                            class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base">Videos</a>
                         <a href="{{ route('services') }}"
-                            class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Servicios</a>
+                            class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base ">Servicios</a>
                         <a href="{{ route('blog.index') }}"
-                            class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Blog</a>
+                            class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base">Blog</a>
                         <div class="group inline-block relative">
                             <div
-                                class="bg-black text-gray-300 hover:bg-gray-700  font-semibold py-2 px-4 rounded inline-flex items-center hover:text-white">
+                                class="bg-black text-gray-300 hover:bg-gray-700 py-2 px-4 rounded inline-flex items-center hover:text-white">
                                 <span class="mr-1">Filma en Huatulco</span>
                                 <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 20 20">
@@ -94,19 +93,20 @@
                                 </svg>
                             </div>
                             <ul
-                                class="absolute hidden  text-gray-700 pt-1  group-hover:block text-center divide-solid divide-black ">
-                                <li class="">
-                                    <a class="rounded-t bg-gray-200 hover:bg-gray-400 py-1 px-4 block whitespace-no-wrap text-sm"
+                                class="absolute hidden  text-gray-700 pt-1  group-hover:block text-center {{-- divide-solid divide-black --}} ">
+                                <li class="border-b border-gray-300">
+                                    <a class="rounded-t bg-gray-200 hover:bg-gray-400 py-1 px-7 block whitespace-no-wrap text-sm"
                                         href="{{ route('permissions') }}">Trámites y Permisos</a>
                                 </li>
+                                                            
 
-                                <li class="">
-                                    <a class="bg-gray-200 hover:bg-gray-400 py-1 px-4 block whitespace-no-wrap text-sm"
+                                <li class="border-b border-gray-300">
+                                    <a class="bg-gray-200 hover:bg-gray-400 py-1 px-7 block whitespace-no-wrap text-sm"
                                         href="{{ route('regulations') }}">Leyes y Reglamentos</a>
                                 </li>
 
-                                <li class="">
-                                    <a class=" bg-gray-200 hover:bg-gray-400 py-1 px-4 block whitespace-no-wrap text-sm"
+                                <li class="border-b border-gray-300">
+                                    <a class=" bg-gray-200 hover:bg-gray-400 py-1 px-7 block whitespace-no-wrap text-sm"
                                         href="{{ route('covid') }}">Protocolo COVID-19</a>
                                 </li>
 
@@ -117,11 +117,11 @@
                             </ul>
                         </div>
                         <a href="{{route('live')}}"
-                            class="text-gray-300 hover:bg-gray-700 hover:text-white  px-3 py-2 rounded-md text-base font-medium flex items-start justify-items-start">Radio
+                            class="text-gray-300 hover:bg-gray-700 hover:text-white  px-3 py-2 rounded-md text-base  flex items-start justify-items-start">En Vivo
                             <div class="blob"></div>
                         </a>
                         <a href="{{ route('contact.index') }}"
-                            class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contacto</a>
+                            class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base ">Contacto</a>
                     </div>
                 </div>
             </div>
@@ -182,7 +182,7 @@
             @else
                 <div class="hidden lg:block ">
                     <a href="{{ route('login') }}"
-                        class="text-gray-300 hover:bg-gray-700 hover:text-white sm:hidden lg:block md:block px-3 py-2 rounded-md text-base font-medium">
+                        class="text-gray-300 hover:bg-gray-700 hover:text-white sm:hidden lg:block md:block px-3 py-2 rounded-md text-base  font-semibold ">
                         Login
                     </a>
 
@@ -195,26 +195,38 @@
 
     <!-- Mobile menu, show/hide based on menu state. -->
     <div class="lg:hidden " id="mobile-menu" x-show="open" x-on:click.away="open=false">
-        <div class="px-2 pt-2 pb-3 space-y-1">
-            <a href="#"
-                class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Locaciones</a>
-            <a href="#"
-                class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Mapa
-                fílmico</a>
-            <a href="#"
-                class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Videos</a>
-            <a href="#"
-                class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Servicios</a>
-            <a href="{{ route('blog.index') }}"
-                class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Blog</a>
-            <a href="#"
-                class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Producción</a>
-            <a href="{{route('live')}}"
-                class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Radio</a>
-            <a href="{{ route('contact.index') }}"
-                class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contacto</a>
-            <a href="#"
-                class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Acerca</a>
+        <div class="px-2 pt-5 pb-3 space-y-1 font-semibold" x-data="{ nosotros: false , filma:false}">
+
+            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base " @click="nosotros = true" {{-- x-show="!nosotros" --}}>Sobre Nosotros <i class="fas fa-chevron-down"></i></a>
+            <div x-show="nosotros" @click.away="nosotros = false">
+            <a href="{{ route('about') }}" class="text-gray-300 bg-gray-600 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base"  >Comisión Fílmica</a> 
+            <a href="{{ route('huatulco') }}" class="text-gray-300 bg-gray-600 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base" >Info. Región</a>   
+            <a href="{{ route('links') }}" class="text-gray-300 bg-gray-600 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base" >Enlaces de Interés</a> 
+            </div>
+            
+            <a href="{{ route('location.index') }}" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base ">Locaciones</a>
+            
+            <a href="{{ route('map') }}" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base ">Mapa Fílmico</a>
+            
+            <a href="{{ route('videos') }}" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base ">Videos</a>
+            
+            <a href="{{ route('services') }}" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base ">Servicios</a>
+            
+            <a href="{{ route('blog.index') }}" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base ">Blog</a>
+            
+            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base " @click="filma = true">Filma en Huatulco <i class="fas fa-chevron-down"></i></a>
+                <div x-show="filma" @click.away="filma = false">
+                    <a href="{{ route('permissions') }}" class="text-gray-300 bg-gray-600 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base ">Trámites y Permisos</a>  
+                    <a href="{{ route('regulations') }}" class="text-gray-300 bg-gray-600 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base ">Leyes y Reglamentos</a>    
+                    <a href="{{ route('covid') }}" class="text-gray-300 bg-gray-600 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base ">Protocolo COVID-19</a>  
+                    <a href="{{ route('incentives') }}" class="text-gray-300 bg-gray-600 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base ">Estímulos</a>
+                </div>
+ 
+            
+            <a href="{{route('live')}}" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base ">Radio</a>
+            
+            <a href="{{ route('contact.index') }}" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base ">Contacto</a>
+            
 
         </div>
     </div>

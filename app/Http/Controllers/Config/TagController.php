@@ -62,7 +62,7 @@ class TagController extends Controller
         ]);
         $tag = Tag::create($request->all());
 
-        return redirect()->route('config.tags.edit', compact('tag'))->with('info','La etiqueta se creo con exito');
+        return redirect()->route('config.tags.index')->with('info','La etiqueta se creó con éxito');
                
     }
 

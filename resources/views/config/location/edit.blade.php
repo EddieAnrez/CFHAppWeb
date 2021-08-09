@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Home')
+@section('title', 'Editar Locación')
 
 @section('content_header')
      <h1>Editar Locación</h1>
@@ -20,11 +20,8 @@
    
     <div class="card-body">
         {!! Form::model($location,['route'=> ['config.locations.update',$location],'autocomplete'=>'off', 'files'=>true,'method'=>'put']) !!}
-        
-       
-        
+                    
         @include('config.location.partials.form')
-
 
         {!! Form::submit('Actualizar Locación', ['class'=>'btn btn-primary']) !!}
         {!! Form::close() !!}

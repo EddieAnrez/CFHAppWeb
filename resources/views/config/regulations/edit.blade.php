@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', 'Comisión Fílmica de Huatulco - Configuración - Leyes y Reglamentos')
+@section('title', 'Editar Ley/Reglamento')
 
 @section('content_header')
-    <h1>Crear Ley/Reglamento</h1> 
+    <h1>Editar Ley/Reglamento</h1> 
 @stop
 
 @section('content')
@@ -69,4 +69,5 @@
             space: '-'
         });
     });
+</script>
 @stop

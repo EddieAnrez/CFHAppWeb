@@ -39,6 +39,14 @@
 </div>
 
 <div class="form-group">
+    {!! Form::label('website', 'Sitio Web:') !!}
+    {!! Form::text('website', null, ['class' => 'form-control', 'placeholder' => 'Ingrese el email del servicio']) !!}
+    @error('website')
+        <small class="text-danger">{{ $message }}</small>
+    @enderror
+</div>
+
+<div class="form-group">
     {!! Form::label('desc', 'Descripción:') !!}
     {!! Form::textarea('desc', null, ['class' => 'form-control', 'placeholder' => 'Ingrese la descripción del servicio']) !!}
     @error('desc')

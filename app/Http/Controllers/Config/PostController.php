@@ -45,10 +45,8 @@ class PostController extends Controller
     public function store(PostRequest $request)
     {
 
-        /* return Storage::put('posts', $request->file('file'));
- */
 
-        $post = Post::create($request->all()); 
+        $post = Post::create($request->all());  
 
         if ($request->file('file')) {
             $url = Storage::put('posts', $request->file('file'));
@@ -62,7 +60,7 @@ class PostController extends Controller
             $post->tags()->attach($request->tags);
         }
 
-        return redirect()->route('config.posts.edit', $post);
+        return redirect()->route('config.posts.index')->with('info', 'El post se creó con éxito');
     }
 
     /**
@@ -87,7 +85,7 @@ class PostController extends Controller
         $this->authorize('author',$post);
         $categories = Category::pluck('name', 'id');
         $tags = Tag::all();
-        return view('config.posts.edit', compact('post', 'categories', 'tags'));
+        return view('config.posts.edit', compact('post', 'categories', 'tags')); 
     }
 
     /**
